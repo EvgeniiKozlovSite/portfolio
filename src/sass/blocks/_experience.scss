@@ -1,0 +1,103 @@
+.experience{
+    padding-top: 20px;
+    
+    .container{
+        text-align: center;
+        .about__line{
+            margin: 0 auto;
+        }
+    }
+    &_subtitle{
+        position: relative;
+        display: block;
+/*         @include before_circle_center; */
+        @include before_circle;
+        &:before{
+            top: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+    }
+    &__wrapper{
+        padding: 60px 65px 0 65px;
+        display: grid;
+        grid-template-columns: 425px 425px;
+        column-gap: 135px;
+        text-align: left;
+    }
+    &__column{
+        &-title{
+            position: relative;
+            padding-left: 35px;
+            &::before{
+                content: '';
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background-color: $main-color;
+                border-radius: 100%;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        ul{
+            list-style-type: none;
+            li{
+                position: relative;
+                &::after{
+                    content: '';
+                    width: 1px;
+                    height: calc(100% + 16px);
+                    position: absolute;
+                    top: -16px;
+                    left: -25px;
+                    background-color: black;
+
+                }
+            }
+        }
+
+    }
+    &__item{
+        &-head {
+            position: relative;
+            padding-left: calc(100px - 2rem);
+            padding-top: 45px;
+            h4{
+                margin-bottom: 0;
+            }
+        }
+        &-body {
+            padding-left: calc(43px - 2rem);
+            margin-top: 12px;
+            position: relative;
+            font-size: 12px;
+            &::before{
+                content: '';
+                width: 31px;
+                height: 1px;
+                position: absolute;
+                left: -24px;
+                top: -29px;
+                background-color: #000;
+                z-index: -3;
+            }
+        }
+        &-icon{
+            position: absolute;
+            left: 23px;
+            bottom: -3px;
+            @include before_circle;
+            &:before{
+                top: -13px;
+                left: -16px;
+            }
+        }
+        &-location{
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
+}

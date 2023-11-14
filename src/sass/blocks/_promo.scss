@@ -1,0 +1,42 @@
+.promo{
+    min-height: 100vh;
+    padding-top: 205px;
+    position: relative;
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url('../img/bg.jpg') no-repeat 50%/cover;
+    animation: line 5s;
+
+    .title_fz16{
+        color: white;
+        position: relative;
+        z-index: 1;
+    }
+    &__subtitle{
+        @include before_circle;
+        padding-left: 10px;
+    }
+    &__title{
+        width: 520px;
+        margin-top: 10px;
+        color: white;
+        background: none;
+    }
+    &__btns{
+        margin-top: 25px;
+        display: flex;
+        width: 300px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__link{
+        font-weight: 700;
+        font-size: 14px;
+        color: white;
+        text-decoration: none;
+        &:hover{
+            color:white;
+            text-decoration: none;
+        }
+    }
+}

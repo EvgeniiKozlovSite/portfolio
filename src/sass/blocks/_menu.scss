@@ -1,0 +1,119 @@
+.hamburger{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    height: 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:flex-end;
+    cursor: pointer;
+    span{
+        display: block;
+        width: 30px;
+        height: 3px;
+        background: white;
+    }
+    span.long{
+        width: 36px;
+    }
+    
+}
+svg.svg_color{
+    fill: #151812;
+}
+.menu{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.6s;
+    &.active{
+        left: 0;
+        visibility: visible;
+        opacity: 1;
+    }
+    &__block{
+        position: relative;
+/*         left: -100%; */
+        padding-top: 140px;
+        width: 345px;
+        height: 100%;
+        background-color: $main-color;
+        transition: all .6s;
+        z-index: 10;
+        
+        
+    }
+    &__close{
+        position: absolute;
+        right: 25px;
+        top: 25px;
+        cursor: pointer;
+    }
+    &__list{
+        /* list-style-image: url('../../icons/circle-regular.svg'); */
+        margin-left: 40px;
+        display: block;
+/*         list-style-position:inherit; */
+        list-style-type: none;
+        transition: all 0.6s;
+
+
+
+    }
+    &__link {
+        position: relative;
+        font-size: 24px;
+        color: #fff;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        &:hover{
+            &::before{
+                background-color: #fff;
+            }
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            display: block;
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+            border: 1px solid #000000;
+            left: -30px;
+            top: 10px;
+            z-index: 10;
+            transition: all 0.6s;
+        }
+
+        a{
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+    &__social{
+        display: flex;
+        width: 90px;
+        justify-content: space-between;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 50px;
+        left: calc(50% - 45px);
+
+    }
+    &__overlay{
+        top: 0;
+        position: fixed;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        opacity: .75;
+    }
+}

@@ -1,0 +1,42 @@
+@mixin before_circle{
+    &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        top: -25%;
+        left: 0;
+        width: 36px;
+        height: 36px;
+        background-color: $main_color;
+        border-radius: 100% 100%;
+        z-index: -1;
+    }
+}
+@mixin before_circle_svg{
+    &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 36px;
+        height: 36px;
+        background-color: $main_color;
+        border-radius: 100% 100%;
+        z-index: -1;
+    }
+}
+@mixin before_circle_center{
+    &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        top: -5px;
+        left: calc(50% - 18px);
+        width: 36px;
+        height: 36px;
+        background-color: $main_color;
+        border-radius: 100% 100%;
+        z-index: -1;
+    }
+}
