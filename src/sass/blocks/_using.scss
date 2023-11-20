@@ -21,8 +21,8 @@
     &__wrapper{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, minmax(270, auto));
-        grid-auto-rows: minmax(270, auto);
+        grid-template-rows: repeat(2, minmax(270px, auto));
+        grid-auto-rows: minmax(270px, auto);
         gap: 13px 13px;
         padding: 60px 0 120px 0;
     }
