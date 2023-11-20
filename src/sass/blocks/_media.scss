@@ -254,6 +254,21 @@
             margin: 20px auto;
         }
     }
+    .modal{
+        z-index: 999;
+        &__form{
+            grid-template: 45px 45px 150px 45px / 400px;
+        }
+        &__textarea{
+            grid-column: 1/2;
+        }
+        &__content{
+            width: 450px;
+            top: 100px;
+            left: 60px;
+            transform: none;
+        }
+    }
 }
 
 @media (max-width: 576px) {
@@ -343,6 +358,17 @@
             span{
                 margin-top: 5px;
             }
+        }
+    }
+    .modal{
+        &__form{
+            grid-template: 45px 45px 150px 45px / 220px;
+        }
+        &__content{
+            width: 260px;
+            top: 150px;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
     
